@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+  --font-heading: "Big Shoulders Display", cursive;
+  --font-body: "Lexend Deca", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button {
+  font-family: var(--font-body);
+}
+.container {
+  padding: 20px;
+}
+.card {
+  padding: 30px;
+}
+.card img {
+  margin-bottom: 25px;
+}
+h2 {
+  font-family: var(--font-heading);
+  color: var(--very-light-gray-background-headings-buttons);
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 15px;
+  color: var(--transparent-white-paragraphs);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+.suvs {
+  background-color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+.btn {
+  background-color: var(--very-light-gray-background-headings-buttons);
+  border: 2px solid var(--very-light-gray-background-headings-buttons);
+  padding: 10px 20px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #fff !important;
+  background-color: transparent;
+  /* color: var(--very-light-gray-background-headings-buttons); */
+}
+.sedans .btn {
+  color: var(--bright-orange);
+}
+.suvs .btn {
+  color: var(--dark-cyan);
+}
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .card {
+    padding: 45px;
+  }
+  p {
+    margin-bottom: 80px;
+  }
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+}
